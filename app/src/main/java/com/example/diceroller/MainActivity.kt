@@ -9,6 +9,7 @@ import android.widget.Toast
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
+    lateinit var imagedice: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 //         Toast.makeText(this,"clicked",Toast.LENGTH_SHORT).show()
            rolldice()
         }
+        imagedice = findViewById(R.id.dice_image)
     }
 
     private fun rolldice() {
@@ -30,7 +32,6 @@ class MainActivity : AppCompatActivity() {
                 5 -> R.drawable.dice_5
                 else-> R.drawable.dice_6
             }
-        val imagedice:ImageView=findViewById(R.id.dice_image)
         imagedice.setImageResource(resourceImage)
     }
 }
